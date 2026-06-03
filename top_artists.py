@@ -8,6 +8,6 @@ duckdb.sql("""
     FROM read_json_auto('data/raw/Streaming_History_Audio_*.json')
     GROUP BY master_metadata_album_artist_name
     ORDER BY total_hours DESC
-    LIMIT 25;
+    LIMIT 10;
 
-""").show(10)
+""").show()
